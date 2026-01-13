@@ -1,7 +1,7 @@
-import RivoBrochure from "@/components/RivoBrochure";
+import { Navigate } from "react-router-dom";
 
 const Index = () => {
-  return <RivoBrochure />;
+    return <Navigate to="/architecture" replace />;
 };
 
 export default Index;
