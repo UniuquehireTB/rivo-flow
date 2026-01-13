@@ -1,7 +1,7 @@
-import RivoArchitecture from "@/components/RivoArchitecture";
+import RivoBrochure from "@/components/RivoBrochure";
 
 const Index = () => {
-  return <RivoArchitecture />;
+  return <RivoBrochure />;
 };
 
 export default Index;
