@@ -1,0 +1,957 @@
+{
+    "slide1": {
+        "bgImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+        "tag": "",
+        "titlePre": "The Future of",
+        "titleMain": "Applicant Tracking System",
+        "description": "Eliminate duplicate candidates, verify identities with AI, automate interview scheduling, and track every hire from application to onboarding. Recruitment intelligence at scale.",
+        "footerYear": "2026",
+        "footerLabel": "Product Brochure",
+        "version": "MVP v1.0",
+        "company": "RIVO"
+    },
+    "slideFeaturesOverview": {
+        "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Platform",
+            "title2": "Capabilities"
+        },
+        "mainTitle": {
+            "line1": "Comprehensive",
+            "line2": "Feature Suite"
+        },
+        "description": "A complete ecosystem designed to optimize every aspect of recruitment. From AI-driven automation to enterprise-grade security.",
+        "featuresList": [
+            "Secure Role-Based Access",
+            "Team Performance Analytics",
+            "Intelligent Duplicate Detection",
+            "AI-Powered Resume Parsing",
+            "Smart Candidate Routing",
+            "Unified Audit Timeline",
+            "Multi-Level Identity Verification",
+            "Orchestrated Hiring Workflow",
+            "Synchronized Interview Scheduling",
+            "End-to-End Candidate Journey",
+            "Scalable Team Hierarchy",
+            "Client Relationship Management",
+            "Zero-Risk Handover Protocols",
+            "Enterprise-Grade Security",
+            "Seamless Leave Management",
+            "Productivity & Themes",
+            "Hierarchical Reports",
+            "Total System Configuration"
+        ]
+    },
+    "slideRoleAccess": {
+        "bgImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Secure Access",
+            "title2": "By Roles"
+        },
+        "roleContent": [
+            {
+                "role": "Admin",
+                "color": "text-red-400",
+                "bg": "bg-red-500",
+                "description": [
+                    "Complete system authority.",
+                    "Configure users, roles, permissions, and master data across all teams, jobs, candidates, interviews, and analytics.",
+                    "Full oversight with audit-level control."
+                ]
+            },
+            {
+                "role": "Manager",
+                "color": "text-indigo-400",
+                "bg": "bg-indigo-500",
+                "description": [
+                    "Drive team success.",
+                    "Manage jobs, candidates, and interviews for your team.",
+                    "Approve leave requests, track performance metrics, and oversee daily recruitment operations with real-time dashboards."
+                ]
+            },
+            {
+                "role": "Team Lead",
+                "color": "text-purple-400",
+                "bg": "bg-purple-500",
+                "description": [
+                    "Empower your recruiters.",
+                    "Monitor team activities, review candidate progress, track interview pipelines, and ensure timely execution.",
+                    "Performance visibility without micromanagement."
+                ]
+            },
+            {
+                "role": "Recruiter",
+                "color": "text-emerald-400",
+                "bg": "bg-emerald-500",
+                "description": [
+                    "Focus on finding talent.",
+                    "Add candidates, schedule interviews, collect feedback, and track your personal performance.",
+                    "Streamlined workflows eliminate administrative overhead."
+                ]
+            }
+        ]
+    },
+    "slide2": {
+        "bgImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "",
+            "title2": "Command Center"
+        },
+        "mainTitle": {
+            "line1": "Team Performance",
+            "line2": "At a Glance."
+        },
+        "features": [
+            {
+                "title": "360° Employee View",
+                "desc": "Search by employee name to instantly pull their full 360° performance report, targets, and activity logs."
+            },
+            {
+                "title": "Time-Based Insights",
+                "desc": "Toggle between Today, Week, or Month views. All metrics recalculate instantly."
+            },
+            {
+                "title": "Complete Funnel Visibility",
+                "desc": "Track 8 distinct stages with granular analytics including Offered Backedout & Joined Backedout. Zero blind spots in your pipeline."
+            }
+        ],
+        "mockUI": {
+            "userName": "John Doe",
+            "userRole": "Senior Recruiter • Bangalore",
+            "filterText": "Filter: This Week",
+            "metrics": {
+                "applications": "45",
+                "selected": "12",
+                "joined": "08",
+                "backedOut": "03"
+            },
+            "jobs": [
+                {
+                    "role": "React Lead",
+                    "sub": "Priority: High"
+                },
+                {
+                    "role": "Java Dev",
+                    "sub": "Global Corp"
+                }
+            ],
+            "activity": [
+                {
+                    "name": "Sarah Smith",
+                    "status": "Applied"
+                },
+                {
+                    "name": "Mike Ross",
+                    "status": "L1 Reject"
+                }
+            ],
+            "interviews": [
+                {
+                    "time": "2:00 PM",
+                    "round": "L2",
+                    "desc": "Frontend Round"
+                },
+                {
+                    "time": "4:30 PM",
+                    "round": "HR",
+                    "desc": "Final Discussion"
+                }
+            ]
+        }
+    },
+    "slide3": {
+        "bgImage": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Zero Duplicates",
+            "title2": "Guaranteed"
+        },
+        "mainTitle": {
+            "line1": "Intelligent",
+            "line2": "Duplicate Detection"
+        },
+        "description": "Never waste time on duplicate entries. Our instant Quick Check scans your entire database in seconds, preventing pipeline pollution and revealing complete candidate histories instantly.",
+        "features": [
+            {
+                "title": "Instant Validation",
+                "desc": "Single upload validates email and phone against your entire database. Know immediately if a candidate exists."
+            },
+            {
+                "title": "Complete Candidate History",
+                "desc": "Access full prospect timeline: All interviews, joining status, feedback, and previous outcomes in one view."
+            }
+        ],
+        "mockUI": {
+            "title": "Smart Match",
+            "status": "Candidate already exists",
+            "sub": "Redirecting to timeline...",
+            "dbLabel": "Central DB",
+            "dbStatus": "Connected",
+            "resumeLabel": "Resume Data",
+            "resumeStatus": "Parsed & Ready"
+        }
+    },
+    "slide4": {
+        "bgImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Zero Manual",
+            "title2": "Data Entry"
+        },
+        "mainTitle": {
+            "line1": "AI-Powered",
+            "line2": "Data Extraction."
+        },
+        "description": "Save hours of manual data entry. Upload any resume and watch our AI instantly extract and populate all candidate details with 95%+ accuracy.",
+        "features": [
+            {
+                "title": "Multi-Format Support",
+                "desc": "Process PDF, Word, and image-based resumes with equal accuracy. No format limitations."
+            },
+            {
+                "title": "Instant Population",
+                "desc": "Name, contact, experience, education, and skills auto-filled in seconds. Complete candidate profiles ready to go."
+            },
+            {
+                "title": "Smart Parsing",
+                "desc": "AI learns industry-specific terminology. Accurately captures complex job titles, certifications, and technical skills."
+            }
+        ],
+        "mockUI": {
+            "uploadTitle": "Upload Resume",
+            "aiBadge": "AI Powered",
+            "uploadDesc": "Auto-extract details from PDF & Word documents."
+        }
+    },
+    "slide5": {
+        "bgImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Intelligent",
+            "title2": "Candidate Routing"
+        },
+        "mainTitle": {
+            "line1": "Smart",
+            "line2": "Placement."
+        },
+        "description": {
+            "main": "Match candidates to the right roles instantly. Routes based on real-time job availability, skills, and team capacity.",
+            "sub": "Directly map to roles or build your talent pool for future opportunities."
+        },
+        "options": [
+            {
+                "title": "Instant Job Placement",
+                "desc": "Assign to available positions instantly and trigger workflow automation."
+            },
+            {
+                "title": "Talent Pool",
+                "desc": "Store qualified candidates for future opportunities without immediate assignment."
+            }
+        ],
+        "mockUI": {
+            "header": "QUICK ACTION PREVIEW",
+            "action": "Add Candidate",
+            "mapJobTitle": "Map Job",
+            "jobName": "Frontend Dev",
+            "jobDetail": "JOB-102 • Bangalore",
+            "resultLabel": "Resulting Status",
+            "resultValue": "Awaiting Feedback"
+        }
+    },
+    "slide6": {
+        "bgImage": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Complete",
+            "title2": "Audit Trail"
+        },
+        "mainTitle": {
+            "line1": "Unified",
+            "line2": "Timeline"
+        },
+        "description": "Gain total visibility with an immutable audit trail of every interaction. From first contact to final offer, every email and interview note is permanently recorded, ensuring accountability with a single, unified timeline.",
+        "stats": {
+            "roundsLabel": "TOTAL ROUNDS",
+            "roundsValue": "4",
+            "feedbackLabel": "FEEDBACK",
+            "feedbackValue": "Positive",
+            "statusLabel": "CURRENT STATUS",
+            "statusValue": "Offered"
+        },
+        "timeline": [
+            {
+                "title": "Joined",
+                "time": "Today, 9:00 AM",
+                "tags": [
+                    "Engineering Dept",
+                    "Full-Time"
+                ]
+            },
+            {
+                "title": "Offered",
+                "time": "2 days ago",
+                "detailLabel": "CTC Offered:",
+                "detailValue": "25 LPA",
+                "note": "\"Candidate accepted the offer.\""
+            },
+            {
+                "title": "Selected",
+                "time": "4 days ago",
+                "detailLabel": "Interviewer:",
+                "detailValue": "Sarah Connor",
+                "feedbackLabel": "Feedback:",
+                "feedbackValue": "\"Strong architectural patterns knowledge.\""
+            }
+        ]
+    },
+    "slide7": {
+        "bgImage": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Verification",
+            "title2": "Fraud Prevention"
+        },
+        "mainTitle": {
+            "line1": "Multi-Level",
+            "line2": "Identity Verification."
+        },
+        "description": "Prevent hiring fraud before it happens. System compares face image from uploaded ID documents against interview snapshots, instantly flagging identity mismatches and protecting your organization.",
+        "checks": [
+            {
+                "title": "Government ID",
+                "desc": "Candidates upload Aadhaar / PAN documents. System verifies document authenticity and extracts face image."
+            },
+            {
+                "title": "Real-Time Face Matching",
+                "desc": "Compare uploaded ID photo against interview snapshots across all rounds. Detect identity mismatches with 99%+ accuracy."
+            }
+        ],
+        "mockUI": {
+            "title": "Verification Status",
+            "id": "ID: CAND-2994-X9",
+            "status": "IDENTITY MISMATCH",
+            "govtLabel": "Government ID",
+            "govtStatus": "Detected",
+            "govtImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+            "liveLabel": "L1 Interview",
+            "liveStatus": "MISMATCH",
+            "liveImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=80",
+            "metrics": {
+                "scoreLabel": "Match Score",
+                "scoreValue": "32%",
+                "simLabel": "Similarity",
+                "simValue": "Low",
+                "actionLabel": "Action",
+                "actionValue": "Required"
+            }
+        }
+    },
+    "slide8": {
+        "bgImage": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Complete Job",
+            "title2": "Control"
+        },
+        "mainTitle": {
+            "line1": "Orchestrate Your",
+            "line2": "Hiring Workflow."
+        },
+        "description": "",
+        "metrics": {
+            "activeLabel": "Active Positions",
+            "activeValue": "24",
+            "filledLabel": "Positions Filled",
+            "filledValue": "18"
+        },
+        "features": [
+            {
+                "title": "Centralized Job Oversight",
+                "desc": "View all open positions, status, and applicant counts in one unified dashboard."
+            },
+            {
+                "title": "Instant Team Assignment",
+                "desc": "Assign recruiters and teams to jobs with one click. Eliminate coordination delays."
+            },
+            {
+                "title": "Real-Time Progress Tracking",
+                "desc": "Monitor each position's status from posting to closure. Zero gaps, zero delays."
+            }
+        ],
+        "mockUI": {
+            "job1": {
+                "title": "Full Stack Engineer",
+                "desc": "Bangalore • 4 Applicants",
+                "status": "Active"
+            },
+            "job2": {
+                "title": "Senior React Dev",
+                "desc": "Remote",
+                "applicants": "12 Applicants"
+            },
+            "job3": {
+                "title": "UX Designer",
+                "desc": "Mumbai • 8 Applicants",
+                "status": "Hold"
+            },
+            "assignModal": {
+                "title": "Assign Recruiters",
+                "suggested": "Suggested Teams",
+                "tags": [
+                    "Tech Hiring",
+                    "Leadership"
+                ],
+                "membersTitle": "Team Members",
+                "members": [
+                    {
+                        "name": "Sarah Jenkins",
+                        "role": "Snr. Recruiter"
+                    },
+                    {
+                        "name": "Mike Ross",
+                        "role": "Talent Acquisition"
+                    }
+                ],
+                "button": "Confirm Assignment"
+            }
+        }
+    },
+    "slide9": {
+        "bgImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Never Miss",
+            "title2": "A Round"
+        },
+        "mainTitle": {
+            "line1": "Synchronized",
+            "line2": "Scheduling"
+        },
+        "description": {
+            "main": "Automated alerts, feedback capture, and smart notifications. Never miss a round with our",
+            "highlight": "Intelligent Reminder System"
+        },
+        "alert": "\"Your interview with Candidate #Sarah J is starting in 5 mins.\"",
+        "cards": [
+            "Calendar Sync",
+            "Feedback Forms",
+            "No-Show Alerts"
+        ],
+        "floatNotification": {
+            "title": "Upcoming Interview",
+            "buttonPrimary": "View Candidate",
+            "buttonSecondary": "Dismiss"
+        },
+        "mockUI": {
+            "scheduleTitle": "Today's Schedule",
+            "items": [
+                {
+                    "time": "09:00 AM",
+                    "title": "Java Developer L1"
+                },
+                {
+                    "time": "11:00 AM",
+                    "title": "React Native Lead L2",
+                    "status": "Joined",
+                    "platform": "Google Meet"
+                },
+                {
+                    "time": "02:30 PM",
+                    "title": "System Design L3"
+                }
+            ]
+        }
+    },
+    "slide10": {
+        "bgImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Complete",
+            "title2": "Journey"
+        },
+        "mainTitle": {
+            "line1": "End-to-End",
+            "line2": "Candidate Journey"
+        },
+        "description": "Track every stage from screening to onboarding with full comments, forms, and status history in one view.",
+        "centerLabel": "Comments & Form Details captured at every status",
+        "stages": [
+            {
+                "title": "Screening",
+                "points": [
+                    "Awaiting Feedback",
+                    "Screen Reject"
+                ]
+            },
+            {
+                "title": "Interviews (L1-L3)",
+                "points": [
+                    "Scheduled / Rescheduled",
+                    "Selected",
+                    "Rejected",
+                    "No Show",
+                    "Cancelled"
+                ]
+            },
+            {
+                "title": "Offer Rollout",
+                "points": [
+                    "Offered",
+                    "Offered Backedout"
+                ]
+            },
+            {
+                "title": "Onboarding",
+                "points": [
+                    "Joined",
+                    "Joined Backedout",
+                    "Job Closed"
+                ]
+            }
+        ]
+    },
+    "slide11": {
+        "bgImage": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Team",
+            "title2": "Control"
+        },
+        "mainTitle": {
+            "line1": "Scalable",
+            "line2": "Team Structure."
+        },
+        "description": "Design and govern complex hierarchies. Assign people to branches and teams in minutes with full visibility.",
+        "metrics": {
+            "membersLabel": "Total Members",
+            "membersValue": "124",
+            "deptLabel": "Departments",
+            "deptValue": "08"
+        },
+        "mockUI": {
+            "teamName": "Engineering Team",
+            "teamBranch": "New York Branch",
+            "status": "Active",
+            "members": [
+                {
+                    "name": "John Doe",
+                    "role": "Tech Lead",
+                    "badge": "Lead"
+                },
+                {
+                    "name": "Alice Smith",
+                    "role": "Senior Developer",
+                    "badge": "Member"
+                },
+                {
+                    "name": "Mike Johnson",
+                    "role": "Frontend Dev",
+                    "badge": "Member"
+                }
+            ]
+        }
+    },
+    "slide12": {
+        "bgImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Client",
+            "title2": "Insights"
+        },
+        "mainTitle": {
+            "line1": "Client",
+            "line2": "Relationship Master"
+        },
+        "description": "Grow every client account with data-backed decisions. Track interactions, requisitions, closures, and placements in real-time—stay proactive, not reactive.",
+        "features": [
+            {
+                "title": "Account Health",
+                "desc": "See active, filled, and in-progress jobs per client to prioritize follow-ups."
+            },
+            {
+                "title": "Revenue & Fill Rates",
+                "desc": "View placements, offers, and acceptance ratios at a glance."
+            },
+            {
+                "title": "Engagement Signals",
+                "desc": "Monitor recency of activity and nudge stakeholders before momentum drops."
+            }
+        ],
+        "contactOptions": [
+            "Direct Contact",
+            "Email Integration"
+        ],
+        "mockUI": {
+            "clientName": "TechStart Corp",
+            "location": "San Francisco, CA",
+            "openJobsLabel": "Open Jobs",
+            "openJobsValue": "12",
+            "activityLabel": "Recent Activity",
+            "activities": [
+                {
+                    "title": "Position successfully filled",
+                    "time": "2h ago"
+                },
+                {
+                    "title": "Job Closed: Java Dev",
+                    "time": "1d ago"
+                },
+                {
+                    "title": "New Requisition Created",
+                    "time": "2d ago"
+                }
+            ]
+        }
+    },
+    "slide13": {
+        "bgImage": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Secure",
+            "title2": "Handovers"
+        },
+        "mainTitle": {
+            "line1": "Zero-Risk",
+            "line2": "Exits &",
+            "line3": "Closures"
+        },
+        "description": "Prevent data loss and candidate drop-offs during exits or job closures. Enforce handover checks, notify stakeholders, and reassign work instantly.",
+        "closingCard": {
+            "title": "Closing Job: Senior React Dev",
+            "subtitle": "3 Active Candidates Found in Pipeline",
+            "actionsLabel": "Required Actions:",
+            "badges": [
+                "Auto-Reject Candidates",
+                "Notify Agency",
+                "Reassign Candidates"
+            ],
+            "buttons": [
+                "Confirm Close",
+                "Cancel"
+            ]
+        },
+        "handoverCard": {
+            "title": "Employee Relieving Protocol",
+            "subtitle": "Initiating Handover for: John Doe",
+            "checks": [
+                {
+                    "label": "Reporting Hierarchy",
+                    "status": "Transferred"
+                },
+                {
+                    "label": "Active Clients",
+                    "status": "Reassigned"
+                },
+                {
+                    "label": "Job Assignments",
+                    "status": "Processing..."
+                }
+            ],
+            "transfer": {
+                "label": "Transferring Assets to Successor",
+                "progress": "65%",
+                "ownerLabel": "New Owner: ",
+                "ownerValue": "Alice Smith"
+            },
+            "floatingBadge": {
+                "title": "Client Inactive?",
+                "desc": "Auto-prompt to reassign pending Jobs & Candidates."
+            }
+        }
+    },
+    "slide14": {
+        "bgImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Enterprise",
+            "title2": "Resilience"
+        },
+        "mainTitle": {
+            "line1": "Robust Power",
+            "line2": "Behind the Platform"
+        },
+        "description": "Banking-grade security with real-time intelligence. Protect access, personalize permissions, and stay alerted on every critical event.",
+        "features": [
+            {
+                "title": "JWT & Session Guard",
+                "desc": "Token-based access • Auto-Logout • Secure Reset Links"
+            },
+            {
+                "title": "RBAC Menu System",
+                "desc": "Dynamic permissions • Role-based view rendering"
+            },
+            {
+                "title": "Intelligence Engine",
+                "desc": "Firebase Analytics • Real-time Notifications • Audit Logs"
+            }
+        ],
+        "centerCore": {
+            "title": "Security Core",
+            "status": "ENCRYPTED"
+        },
+        "orbitCards": {
+            "auth": {
+                "title": "Smart Lock",
+                "desc": "Three failed attempts = Auto Profile Lock. Admin unlock required."
+            },
+            "notifications": {
+                "title": "Real-time Sync",
+                "items": [
+                    "New Offer Accepted",
+                    "System Updatev1.2"
+                ]
+            },
+            "analytics": {
+                "title": "Firebase Metrics"
+            }
+        }
+    },
+    "slide15": {
+        "bgImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Leave",
+            "title2": "Management"
+        },
+        "mainTitle": {
+            "line1": "Seamless",
+            "line2": "Time Off."
+        },
+        "description": "Self-service leave with manager oversight. Apply in seconds, track balances in real time, and keep teams informed.",
+        "dashboard": {
+            "stats": [
+                {
+                    "value": "12",
+                    "label": "Total"
+                },
+                {
+                    "value": "02",
+                    "label": "Pending"
+                },
+                {
+                    "value": "08",
+                    "label": "Used"
+                }
+            ],
+            "button": "Apply Leave",
+            "mockItems": [
+                "Sick Leave",
+                "Full Day",
+                "12th Aug - 14th Aug",
+                "Not feeling well, running fever..."
+            ]
+        },
+        "managerCard": {
+            "userName": "John Doe",
+            "userRole": "Software Engineer",
+            "badge": "Pending Approval",
+            "details": [
+                {
+                    "label": "Type:",
+                    "value": "Casual Leave"
+                },
+                {
+                    "label": "Duration:",
+                    "value": "2 Days"
+                },
+                {
+                    "note": "\"Family event in hometown.\""
+                }
+            ],
+            "actions": [
+                "Approve",
+                "Reject"
+            ]
+        },
+        "overlays": {
+            "rejection": {
+                "title": "Rejection Feedback",
+                "text": "Please utilize your earned leave balance first...",
+                "button": "Confirm Rejection"
+            },
+            "toast": "Leave Approved!"
+        }
+    },
+    "slide16": {
+        "bgImage": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Productivity",
+            "title2": "Ecosystem"
+        },
+        "mainTitle": {
+            "line1": "Unified",
+            "line2": "Workspace"
+        },
+        "actions": [
+            {
+                "label": "Add Job"
+            },
+            {
+                "label": "Quick Create"
+            },
+            {
+                "label": "Add Candidate"
+            }
+        ],
+        "widgets": {
+            "taskMaster": {
+                "title": "Task Master",
+                "taskTitle": "Review Senior Dev Profiles",
+                "time": "Due Today at 5:00 PM",
+                "footer": "2 Pending Tasks"
+            },
+            "calendar": {
+                "title": "Smart Calendar",
+                "events": [
+                    {
+                        "time": "10:00",
+                        "title": "Interview: John Doe"
+                    },
+                    {
+                        "time": "14:30",
+                        "title": "Engineering Team Sync"
+                    },
+                    {
+                        "time": "16:00",
+                        "title": "Todo List"
+                    }
+                ]
+            },
+            "theme": {
+                "title": "Theme Support",
+                "label": "Dark & Light Mode",
+                "desc": "Seamlessly switch between themes."
+            }
+        },
+        "description": "One workspace for everything hiring: capture tasks, schedule interviews, and launch actions without context switching."
+    },
+    "slide17": {
+        "bgImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "Data-Driven",
+            "title2": "Decisions"
+        },
+        "mainTitle": {
+            "line1": "Hierarchical",
+            "line2": "Performance Intelligence."
+        },
+        "description": "Make smarter hiring decisions with role-based performance views. Drill down from organization to individual metrics—success ratios, offer acceptance, and pipeline health all in real-time.",
+        "features": [
+            {
+                "title": "Role-Based Drill Down",
+                "desc": "Aggregate team metrics or zoom into individual performance. Perfect for Leads & Managers."
+            },
+            {
+                "title": "Instant Export",
+                "desc": "One-click PDF generation for offline review and stakeholder sharing."
+            }
+        ],
+        "mockUI": {
+            "headerBadges": [
+                "Manager View",
+                "Export PDF"
+            ],
+            "gridHeader": [
+                "Member / Role",
+                "Submissions",
+                "Joined",
+                "Success %"
+            ],
+            "rows": [
+                {
+                    "name": "John Doe",
+                    "role": "Manager",
+                    "sub": "1,240",
+                    "joined": "85",
+                    "pct": "75%"
+                },
+                {
+                    "name": "Alice Smith",
+                    "role": "Lead",
+                    "sub": "450",
+                    "joined": "32",
+                    "pct": "82%"
+                },
+                {
+                    "name": "Mike Ross",
+                    "role": "Recruiter",
+                    "sub": "120",
+                    "joined": "8",
+                    "conv": "6.5% Conv"
+                }
+            ],
+            "footer": "Total Records: 1,240",
+            "sync": "Sync Status: Live",
+            "filterTooltip": "Filtered by Team A"
+        }
+    },
+    "slide18": {
+        "bgImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
+        "header": {
+            "title1": "System",
+            "title2": "Center"
+        },
+        "mainTitle": {
+            "line1": "Total System",
+            "line2": "Control."
+        },
+        "description": "Control every system setting without writing code. Manage skills, locations, branches, and permissions—keeping your platform flexible and secure.",
+        "features": [
+            {
+                "title": "Master Data Management",
+                "desc": "Centralize Skills, Locations, and Branches. One place to manage all organizational master data."
+            },
+            {
+                "title": "Role-Based Permissions",
+                "desc": "Grant granular access to modules and features by role. Control who sees what, instantly."
+            }
+        ],
+        "mockUI": {
+            "tiles": [
+                {
+                    "title": "Skills",
+                    "count": "142 Entries"
+                },
+                {
+                    "title": "Locations",
+                    "count": "24 Cities"
+                },
+                {
+                    "title": "Roles",
+                    "count": "5 Defined"
+                }
+            ],
+            "matrixTitle": "Access Permission Matrix",
+            "matrixHeaders": [
+                "Module",
+                "Admin",
+                "Mgr",
+                "Recr"
+            ],
+            "matrixRows": [
+                {
+                    "module": "Candidate Mgmt"
+                },
+                {
+                    "module": "Analytics"
+                },
+                {
+                    "module": "System Config"
+                }
+            ]
+        }
+    },
+    "slide19": {
+        "bgImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80",
+        "mainTitle": {
+            "line1": "Built on",
+            "line2": "Modern Tech."
+        },
+        "description": "Enterprise-grade architecture built for scale, security, and speed. Cloud-native deployment with 99.9% uptime SLA.",
+        "techStack": [
+            {
+                "title": "React + Vite",
+                "desc": "Lightning-fast user experience with modern tooling. Optimized for speed and developer efficiency."
+            },
+            {
+                "title": "Spring Boot",
+                "desc": "Secure, scalable Java REST APIs. Battle-tested enterprise reliability."
+            },
+            {
+                "title": "PostgreSQL",
+                "desc": "Enterprise-grade relational database. ACID compliance, automatic backups, and disaster recovery."
+            },
+            {
+                "title": "Cloud Native",
+                "desc": "Scalable, secure cloud deployment with auto-scaling, redundancy, and 99.9% SLA."
+            }
+        ]
+    }
+}
