@@ -99,7 +99,7 @@
         },
         "mainTitle": {
             "line1": "Team Performance",
-            "line2": "At a Glance."
+            "line2": "At a Glance"
         },
         "features": [
             {
@@ -198,7 +198,7 @@
         },
         "mainTitle": {
             "line1": "AI-Powered",
-            "line2": "Data Extraction."
+            "line2": "Data Extraction"
         },
         "description": "Save hours of manual data entry. Upload any resume and watch our AI instantly extract and populate all candidate details with 95%+ accuracy.",
         "features": [
@@ -229,7 +229,7 @@
         },
         "mainTitle": {
             "line1": "Smart",
-            "line2": "Placement."
+            "line2": "Placement"
         },
         "description": {
             "main": "Match candidates to the right roles instantly. Routes based on real-time job availability, skills, and team capacity.",
@@ -308,7 +308,7 @@
         },
         "mainTitle": {
             "line1": "Multi-Level",
-            "line2": "Identity Verification."
+            "line2": "Identity Verification"
         },
         "description": "Prevent hiring fraud before it happens. System compares face image from uploaded ID documents against interview snapshots, instantly flagging identity mismatches and protecting your organization.",
         "checks": [
@@ -349,7 +349,7 @@
         },
         "mainTitle": {
             "line1": "Orchestrate Your",
-            "line2": "Hiring Workflow."
+            "line2": "Hiring Workflow"
         },
         "description": "",
         "metrics": {
@@ -510,7 +510,7 @@
         },
         "mainTitle": {
             "line1": "Scalable",
-            "line2": "Team Structure."
+            "line2": "Team Structure"
         },
         "description": "Design and govern complex hierarchies. Assign people to branches and teams in minutes with full visibility.",
         "metrics": {
@@ -702,7 +702,7 @@
         },
         "mainTitle": {
             "line1": "Seamless",
-            "line2": "Time Off."
+            "line2": "Time Off"
         },
         "description": "Self-service leave with manager oversight. Apply in seconds, track balances in real time, and keep teams informed.",
         "dashboard": {
@@ -820,7 +820,7 @@
         },
         "mainTitle": {
             "line1": "Hierarchical",
-            "line2": "Performance Intelligence."
+            "line2": "Performance Intelligence"
         },
         "description": "Make smarter hiring decisions with role-based performance views. Drill down from organization to individual metrics—success ratios, offer acceptance, and pipeline health all in real-time.",
         "features": [
@@ -880,7 +880,7 @@
         },
         "mainTitle": {
             "line1": "Total System",
-            "line2": "Control."
+            "line2": "Control"
         },
         "description": "Control every system setting without writing code. Manage skills, locations, branches, and permissions—keeping your platform flexible and secure.",
         "features": [
