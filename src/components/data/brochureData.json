@@ -2,9 +2,9 @@
     "slide1": {
         "bgImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
         "tag": "",
-        "titlePre": "The Future of",
-        "titleMain": "Applicant Tracking System",
-        "description": "Eliminate duplicate candidates, verify identities with AI, automate interview scheduling, and track every hire from application to onboarding. Recruitment intelligence at scale.",
+        "titlePre": "Transforming",
+        "titleMain": "Enterprise Hiring Operations",
+        "description": "RIVO enables structured, scalable, and governed hiring across the organization. The platform enables consistent candidate identification, trusted validation, automated interview coordination, and complete visibility across the hiring lifecycle—from application to onboarding—supporting faster decisions and predictable outcomes.",
         "footerYear": "2026",
         "footerLabel": "Product Brochure",
         "version": "MVP v1.0",
@@ -36,7 +36,6 @@
             "Client Relationship Management",
             "Zero-Risk Handover Protocols",
             "Enterprise-Grade Security",
-            "Seamless Leave Management",
             "Productivity & Themes",
             "Hierarchical Reports",
             "Total System Configuration"
@@ -54,9 +53,9 @@
                 "color": "text-red-400",
                 "bg": "bg-red-500",
                 "description": [
-                    "Complete system authority.",
-                    "Configure users, roles, permissions, and master data across all teams, jobs, candidates, interviews, and analytics.",
-                    "Full oversight with audit-level control."
+                    "Centralized administrative control across the platform.",
+                    "Define users, roles, permissions, and master data spanning teams, jobs, candidates, interviews, and analytics.",
+                    "Ensures governance, compliance, and full operational visibility."
                 ]
             },
             {
@@ -64,9 +63,9 @@
                 "color": "text-indigo-400",
                 "bg": "bg-indigo-500",
                 "description": [
-                    "Drive team success.",
-                    "Manage jobs, candidates, and interviews for your team.",
-                    "Approve leave requests, track performance metrics, and oversee daily recruitment operations with real-time dashboards."
+                    "Enable consistent team execution.",
+                    "Oversee jobs, candidates, and interviews across assigned teams.",
+                    "Track performance metrics, approve leave requests, and manage daily recruitment operations through real-time dashboards."
                 ]
             },
             {
@@ -74,9 +73,9 @@
                 "color": "text-purple-400",
                 "bg": "bg-purple-500",
                 "description": [
-                    "Empower your recruiters.",
-                    "Monitor team activities, review candidate progress, track interview pipelines, and ensure timely execution.",
-                    "Performance visibility without micromanagement."
+                    "Provide structured guidance to recruiters.",
+                    "Monitor candidate progress, interview pipelines, and task execution across the team.",
+                    "Delivers performance visibility while supporting autonomy."
                 ]
             },
             {
@@ -84,9 +83,9 @@
                 "color": "text-emerald-400",
                 "bg": "bg-emerald-500",
                 "description": [
-                    "Focus on finding talent.",
-                    "Add candidates, schedule interviews, collect feedback, and track your personal performance.",
-                    "Streamlined workflows eliminate administrative overhead."
+                    "Focus on talent engagement and delivery.",
+                    "Manage candidates, schedule interviews, capture feedback, and track individual performance.",
+                    "Purpose-built workflows support productivity and consistency."
                 ]
             }
         ]
@@ -103,16 +102,16 @@
         },
         "features": [
             {
-                "title": "360° Employee View",
-                "desc": "Search by employee name to instantly pull their full 360° performance report, targets, and activity logs."
+                "title": "Unified Employee View",
+                "desc": "Quickly access a consolidated view of individual performance, targets, and activity history to support informed decisions."
             },
             {
                 "title": "Time-Based Insights",
-                "desc": "Toggle between Today, Week, or Month views. All metrics recalculate instantly."
+                "desc": "Switch seamlessly between Today, Week, and Month views, with metrics updating dynamically to reflect current progress."
             },
             {
-                "title": "Complete Funnel Visibility",
-                "desc": "Track 8 distinct stages with granular analytics including Offered Backedout & Joined Backedout. Zero blind spots in your pipeline."
+                "title": "Funnel Stage Visibility",
+                "desc": "Track progress across multiple hiring stages with clear analytics on movement, outcomes, and overall pipeline health."
             }
         ],
         "mockUI": {
@@ -232,17 +231,17 @@
             "line2": "Placement"
         },
         "description": {
-            "main": "Match candidates to the right roles instantly. Routes based on real-time job availability, skills, and team capacity.",
-            "sub": "Directly map to roles or build your talent pool for future opportunities."
+            "main": "Enable accurate and timely candidate placement aligned to active roles, skill requirements, and team capacity.",
+            "sub": "Supports both immediate role mapping and structured talent pooling for future opportunities."
         },
         "options": [
             {
                 "title": "Instant Job Placement",
-                "desc": "Assign to available positions instantly and trigger workflow automation."
+                "desc": "Map candidates to relevant open positions and initiate the hiring workflow seamlessly."
             },
             {
                 "title": "Talent Pool",
-                "desc": "Store qualified candidates for future opportunities without immediate assignment."
+                "desc": "Organize qualified candidates within a central pool, ready for upcoming requirements."
             }
         ],
         "mockUI": {
@@ -265,7 +264,7 @@
             "line1": "Unified",
             "line2": "Timeline"
         },
-        "description": "Gain total visibility with an immutable audit trail of every interaction. From first contact to final offer, every email and interview note is permanently recorded, ensuring accountability with a single, unified timeline.",
+        "description": "Establish transparency and accountability across the hiring process through a unified, system-recorded timeline. Every interaction—from initial engagement to final offer—is captured in context, enabling traceability, governance, and informed decision-making.",
         "stats": {
             "roundsLabel": "TOTAL ROUNDS",
             "roundsValue": "4",
@@ -288,7 +287,7 @@
                 "time": "2 days ago",
                 "detailLabel": "CTC Offered:",
                 "detailValue": "25 LPA",
-                "note": "\"Candidate accepted the offer.\""
+                "note": "\"Offer accepted and acknowledged by the candidate.\""
             },
             {
                 "title": "Selected",
@@ -296,7 +295,7 @@
                 "detailLabel": "Interviewer:",
                 "detailValue": "Sarah Connor",
                 "feedbackLabel": "Feedback:",
-                "feedbackValue": "\"Strong architectural patterns knowledge.\""
+                "feedbackValue": "\"Demonstrated strong understanding of architectural patterns.\""
             }
         ]
     },
@@ -304,40 +303,40 @@
         "bgImage": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80",
         "header": {
             "title1": "Verification",
-            "title2": "Fraud Prevention"
+            "title2": "Assurance"
         },
         "mainTitle": {
             "line1": "Multi-Level",
             "line2": "Identity Verification"
         },
-        "description": "Prevent hiring fraud before it happens. System compares face image from uploaded ID documents against interview snapshots, instantly flagging identity mismatches and protecting your organization.",
+        "description": "Build trust and confidence throughout the hiring process with multi-level identity assurance. The system aligns candidate-submitted identification with interview-stage verification signals, supporting consistent review and informed hiring decisions.",
         "checks": [
             {
                 "title": "Government ID",
-                "desc": "Candidates upload Aadhaar / PAN documents. System verifies document authenticity and extracts face image."
+                "desc": "Candidates submit government-issued identification documents. The system validates document authenticity and extracts the associated facial reference."
             },
             {
-                "title": "Real-Time Face Matching",
-                "desc": "Compare uploaded ID photo against interview snapshots across all rounds. Detect identity mismatches with 99%+ accuracy."
+                "title": "Interview-Stage Face Matching",
+                "desc": "Compare the submitted ID reference with interview snapshots captured across hiring stages, supporting visual consistency checks throughout the process."
             }
         ],
         "mockUI": {
             "title": "Verification Status",
             "id": "ID: CAND-2994-X9",
-            "status": "IDENTITY MISMATCH",
+            "status": "VERIFICATION REVIEW REQUIRED",
             "govtLabel": "Government ID",
             "govtStatus": "Detected",
             "govtImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
             "liveLabel": "L1 Interview",
-            "liveStatus": "MISMATCH",
+            "liveStatus": "REVIEW REQUIRED",
             "liveImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=80",
             "metrics": {
-                "scoreLabel": "Match Score",
+                "scoreLabel": "Match Confidence",
                 "scoreValue": "32%",
                 "simLabel": "Similarity",
                 "simValue": "Low",
-                "actionLabel": "Action",
-                "actionValue": "Required"
+                "actionLabel": "Next Step",
+                "actionValue": "Review"
             }
         }
     },
@@ -351,7 +350,7 @@
             "line1": "Orchestrate Your",
             "line2": "Hiring Workflow"
         },
-        "description": "",
+        "description": "Bring structure and consistency to job execution across teams. Manage roles, assignments, and progress through a centralized workflow designed to support visibility, coordination, and timely outcomes.",
         "metrics": {
             "activeLabel": "Active Positions",
             "activeValue": "24",
@@ -361,15 +360,15 @@
         "features": [
             {
                 "title": "Centralized Job Oversight",
-                "desc": "View all open positions, status, and applicant counts in one unified dashboard."
+                "desc": "View open roles, current status, and applicant activity within a single, unified workspace."
             },
             {
-                "title": "Instant Team Assignment",
-                "desc": "Assign recruiters and teams to jobs with one click. Eliminate coordination delays."
+                "title": "Streamlined Team Assignment",
+                "desc": "Assign recruiters and teams to roles with clarity, supporting coordinated execution across hiring functions."
             },
             {
-                "title": "Real-Time Progress Tracking",
-                "desc": "Monitor each position's status from posting to closure. Zero gaps, zero delays."
+                "title": "Progress Visibility",
+                "desc": "Track each role from creation to closure with clear status indicators that support planning and follow-through."
             }
         ],
         "mockUI": {
@@ -413,22 +412,22 @@
     "slide9": {
         "bgImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80",
         "header": {
-            "title1": "Never Miss",
-            "title2": "A Round"
+            "title1": "Always",
+            "title2": "Aligned"
         },
         "mainTitle": {
             "line1": "Synchronized",
             "line2": "Scheduling"
         },
         "description": {
-            "main": "Automated alerts, feedback capture, and smart notifications. Never miss a round with our",
+            "main": "Coordinate interviews and feedback through automated alerts and timely notifications that keep all participants aligned.",
             "highlight": "Intelligent Reminder System"
         },
-        "alert": "\"Your interview with Candidate #Sarah J is starting in 5 mins.\"",
+        "alert": "\"Your interview with Candidate Sarah J is scheduled to begin in 5 minutes.\"",
         "cards": [
             "Calendar Sync",
             "Feedback Forms",
-            "No-Show Alerts"
+            "Attendance Alerts"
         ],
         "floatNotification": {
             "title": "Upcoming Interview",
@@ -465,14 +464,14 @@
             "line1": "End-to-End",
             "line2": "Candidate Journey"
         },
-        "description": "Track every stage from screening to onboarding with full comments, forms, and status history in one view.",
-        "centerLabel": "Comments & Form Details captured at every status",
+        "description": "Maintain a clear, continuous view of every candidate’s progress—from initial screening through onboarding—supported by contextual comments, forms, and status history in a single, unified view.",
+        "centerLabel": "Comments and form details are captured consistently at every stage",
         "stages": [
             {
                 "title": "Screening",
                 "points": [
                     "Awaiting Feedback",
-                    "Screen Reject"
+                    "Screen Review Outcome"
                 ]
             },
             {
@@ -480,23 +479,23 @@
                 "points": [
                     "Scheduled / Rescheduled",
                     "Selected",
-                    "Rejected",
-                    "No Show",
-                    "Cancelled"
+                    "Interview Outcome",
+                    "Attendance Recorded",
+                    "Session Cancelled"
                 ]
             },
             {
                 "title": "Offer Rollout",
                 "points": [
-                    "Offered",
-                    "Offered Backedout"
+                    "Offer Extended",
+                    "Offer Response Recorded"
                 ]
             },
             {
                 "title": "Onboarding",
                 "points": [
                     "Joined",
-                    "Joined Backedout",
+                    "Onboarding Status Updated",
                     "Job Closed"
                 ]
             }
@@ -512,7 +511,7 @@
             "line1": "Scalable",
             "line2": "Team Structure"
         },
-        "description": "Design and govern complex hierarchies. Assign people to branches and teams in minutes with full visibility.",
+        "description": "Design and manage organizational structures with clarity and flexibility. Define teams, branches, and reporting relationships in a way that supports growth, accountability, and operational transparency.",
         "metrics": {
             "membersLabel": "Total Members",
             "membersValue": "124",
@@ -552,19 +551,19 @@
             "line1": "Client",
             "line2": "Relationship Master"
         },
-        "description": "Grow every client account with data-backed decisions. Track interactions, requisitions, closures, and placements in real-time—stay proactive, not reactive.",
+        "description": "Strengthen client relationships through clear visibility into engagements, hiring progress, and outcomes. A unified view of requisitions, placements, and interactions supports proactive collaboration and long-term account growth.",
         "features": [
             {
                 "title": "Account Health",
-                "desc": "See active, filled, and in-progress jobs per client to prioritize follow-ups."
+                "desc": "Maintain a clear view of active, completed, and in-progress roles across each client account to support prioritization and planning."
             },
             {
-                "title": "Revenue & Fill Rates",
-                "desc": "View placements, offers, and acceptance ratios at a glance."
+                "title": "Revenue & Fill Visibility",
+                "desc": "Track placements, offers, and acceptance trends to understand hiring momentum and performance."
             },
             {
                 "title": "Engagement Signals",
-                "desc": "Monitor recency of activity and nudge stakeholders before momentum drops."
+                "desc": "Monitor recent activity and interaction patterns to maintain continuity and timely client communication."
             }
         ],
         "contactOptions": [
@@ -600,18 +599,18 @@
             "title2": "Handovers"
         },
         "mainTitle": {
-            "line1": "Zero-Risk",
+            "line1": "Structured",
             "line2": "Exits &",
             "line3": "Closures"
         },
-        "description": "Prevent data loss and candidate drop-offs during exits or job closures. Enforce handover checks, notify stakeholders, and reassign work instantly.",
+        "description": "Ensure continuity and clarity during job closures and employee transitions through guided handover workflows. The system supports orderly reassignment, stakeholder communication, and seamless continuation of hiring activities.",
         "closingCard": {
             "title": "Closing Job: Senior React Dev",
-            "subtitle": "3 Active Candidates Found in Pipeline",
-            "actionsLabel": "Required Actions:",
+            "subtitle": "Active candidates identified within the current pipeline",
+            "actionsLabel": "Next Actions:",
             "badges": [
-                "Auto-Reject Candidates",
-                "Notify Agency",
+                "Update Candidate Status",
+                "Notify Stakeholders",
                 "Reassign Candidates"
             ],
             "buttons": [
@@ -620,8 +619,8 @@
             ]
         },
         "handoverCard": {
-            "title": "Employee Relieving Protocol",
-            "subtitle": "Initiating Handover for: John Doe",
+            "title": "Employee Transition Protocol",
+            "subtitle": "Initiating handover for: John Doe",
             "checks": [
                 {
                     "label": "Reporting Hierarchy",
@@ -633,18 +632,18 @@
                 },
                 {
                     "label": "Job Assignments",
-                    "status": "Processing..."
+                    "status": "In Progress"
                 }
             ],
             "transfer": {
-                "label": "Transferring Assets to Successor",
+                "label": "Transferring ownership to successor",
                 "progress": "65%",
                 "ownerLabel": "New Owner: ",
                 "ownerValue": "Alice Smith"
             },
             "floatingBadge": {
-                "title": "Client Inactive?",
-                "desc": "Auto-prompt to reassign pending Jobs & Candidates."
+                "title": "Pending Items Detected",
+                "desc": "System prompts review and reassignment of active jobs and candidates."
             }
         }
     },
@@ -658,19 +657,19 @@
             "line1": "Robust Power",
             "line2": "Behind the Platform"
         },
-        "description": "Banking-grade security with real-time intelligence. Protect access, personalize permissions, and stay alerted on every critical event.",
+        "description": "Provide a secure and resilient foundation for enterprise hiring operations. The platform combines strong access controls, intelligent monitoring, and real-time insights to support trusted usage, operational continuity, and informed oversight.",
         "features": [
             {
                 "title": "JWT & Session Guard",
-                "desc": "Token-based access • Auto-Logout • Secure Reset Links"
+                "desc": "Token-based access management with session control, automatic logout, and secure credential recovery flows."
             },
             {
                 "title": "RBAC Menu System",
-                "desc": "Dynamic permissions • Role-based view rendering"
+                "desc": "Dynamic, role-based permission mapping that ensures users see only what is relevant to their responsibilities."
             },
             {
                 "title": "Intelligence Engine",
-                "desc": "Firebase Analytics • Real-time Notifications • Audit Logs"
+                "desc": "Integrated analytics, real-time notifications, and audit signals that support visibility and proactive system awareness."
             }
         ],
         "centerCore": {
@@ -679,22 +678,22 @@
         },
         "orbitCards": {
             "auth": {
-                "title": "Smart Lock",
-                "desc": "Three failed attempts = Auto Profile Lock. Admin unlock required."
+                "title": "Smart Access Control",
+                "desc": "Adaptive safeguards respond to access patterns, supporting secure and responsible system usage."
             },
             "notifications": {
-                "title": "Real-time Sync",
+                "title": "Real-Time Updates",
                 "items": [
-                    "New Offer Accepted",
-                    "System Updatev1.2"
+                    "Offer Accepted",
+                    "System Update v1.2"
                 ]
             },
             "analytics": {
-                "title": "Firebase Metrics"
+                "title": "Operational Metrics"
             }
         }
     },
-    "slide15": {
+    "_slide15": {
         "bgImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80",
         "header": {
             "title1": "Leave",
@@ -807,10 +806,10 @@
             "theme": {
                 "title": "Theme Support",
                 "label": "Dark & Light Mode",
-                "desc": "Seamlessly switch between themes."
+                "desc": "Switch seamlessly between visual themes to support individual working preferences."
             }
         },
-        "description": "One workspace for everything hiring: capture tasks, schedule interviews, and launch actions without context switching."
+        "description": "Bring tasks, schedules, and key actions together in a single workspace designed to support focus, efficiency, and smooth day-to-day hiring operations."
     },
     "slide17": {
         "bgImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
@@ -822,15 +821,15 @@
             "line1": "Hierarchical",
             "line2": "Performance Intelligence"
         },
-        "description": "Make smarter hiring decisions with role-based performance views. Drill down from organization to individual metrics—success ratios, offer acceptance, and pipeline health all in real-time.",
+        "description": "Enable informed hiring decisions through role-based performance visibility. View metrics across organizational levels—from leadership to individual contributors—providing clear insight into outcomes, trends, and pipeline effectiveness in real time.",
         "features": [
             {
                 "title": "Role-Based Drill Down",
-                "desc": "Aggregate team metrics or zoom into individual performance. Perfect for Leads & Managers."
+                "desc": "Review aggregated performance at the organization or team level, or explore individual contributions to support focused analysis."
             },
             {
                 "title": "Instant Export",
-                "desc": "One-click PDF generation for offline review and stakeholder sharing."
+                "desc": "Generate performance summaries in a shareable format to support reviews, reporting, and stakeholder discussions."
             }
         ],
         "mockUI": {
@@ -882,15 +881,15 @@
             "line1": "Total System",
             "line2": "Control"
         },
-        "description": "Control every system setting without writing code. Manage skills, locations, branches, and permissions—keeping your platform flexible and secure.",
+        "description": "Configure and govern the platform through centralized system settings designed for flexibility and consistency. Manage organizational data, access rules, and configurations in a controlled environment that supports evolving business needs.",
         "features": [
             {
                 "title": "Master Data Management",
-                "desc": "Centralize Skills, Locations, and Branches. One place to manage all organizational master data."
+                "desc": "Maintain a single source of truth for skills, locations, branches, and other organizational data to support consistent hiring operations."
             },
             {
                 "title": "Role-Based Permissions",
-                "desc": "Grant granular access to modules and features by role. Control who sees what, instantly."
+                "desc": "Define and manage access levels across modules and features, ensuring responsibilities are clearly aligned with visibility and control."
             }
         ],
         "mockUI": {
@@ -905,7 +904,7 @@
                 },
                 {
                     "title": "Roles",
-                    "count": "5 Defined"
+                    "count": "4 Defined"
                 }
             ],
             "matrixTitle": "Access Permission Matrix",
@@ -932,25 +931,25 @@
         "bgImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80",
         "mainTitle": {
             "line1": "Built on",
-            "line2": "Modern Tech."
+            "line2": "Modern Tech"
         },
-        "description": "Enterprise-grade architecture built for scale, security, and speed. Cloud-native deployment with 99.9% uptime SLA.",
+        "description": "A modern, enterprise-ready architecture designed for scalability, security, and performance. The platform leverages proven technologies and cloud-native principles to support reliable operations and future growth.",
         "techStack": [
             {
                 "title": "React + Vite",
-                "desc": "Lightning-fast user experience with modern tooling. Optimized for speed and developer efficiency."
+                "desc": "Modern frontend tooling that delivers responsive user experiences and supports rapid, maintainable development."
             },
             {
                 "title": "Spring Boot",
-                "desc": "Secure, scalable Java REST APIs. Battle-tested enterprise reliability."
+                "desc": "A robust Java-based backend framework that enables secure, scalable REST APIs and enterprise-grade reliability."
             },
             {
                 "title": "PostgreSQL",
-                "desc": "Enterprise-grade relational database. ACID compliance, automatic backups, and disaster recovery."
+                "desc": "A trusted relational database platform supporting data integrity, transactional consistency, and operational resilience."
             },
             {
                 "title": "Cloud Native",
-                "desc": "Scalable, secure cloud deployment with auto-scaling, redundancy, and 99.9% SLA."
+                "desc": "Cloud-native deployment architecture designed to support elasticity, resilience, and high availability at scale."
             }
         ]
     }

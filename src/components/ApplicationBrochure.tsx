@@ -1488,10 +1488,9 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 15: LEAVE MANAGEMENT (Detailed Redesign) ==================== */}
-                <ImageSlide bg={brochureData.slide15.bgImage}>
+                {/* <ImageSlide bg={brochureData.slide15.bgImage}>
                     <div className="h-full bg-slate-950/95 p-16 flex flex-col relative overflow-hidden">
 
-                        {/* Background Accents - Green/Natural */}
                         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-green-900/20 blur-[100px] rounded-full pointer-events-none" />
                         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-900/20 blur-[100px] rounded-full pointer-events-none" />
 
@@ -1499,7 +1498,6 @@ const ApplicationBrochure = () => {
 
                         <div className="flex-1 grid grid-cols-2 gap-16 items-center z-10">
 
-                            {/* LEFT: Employee View & Stats */}
                             <div className="space-y-6">
                                 <div>
                                     <h2 className="text-4xl font-bold leading-tight text-white mb-2">
@@ -1510,7 +1508,6 @@ const ApplicationBrochure = () => {
                                     </p>
                                 </div>
 
-                                {/* Mock Leave Dashboard Card */}
                                 <div className="bg-slate-900/80 backdrop-blur-xl border border-slate-700 p-6 rounded-2xl shadow-xl">
                                     <div className="flex justify-between items-center mb-6">
                                         <div className="flex gap-2">
@@ -1529,7 +1526,6 @@ const ApplicationBrochure = () => {
                                         </Button>
                                     </div>
 
-                                    {/* Mock Form Visual */}
                                     <div className="space-y-3 opacity-80 pointer-events-none">
                                         <div className="grid grid-cols-2 gap-3">
                                             <div className="h-8 bg-slate-800 rounded border border-slate-700 flex items-center px-2 text-xs text-slate-400">{brochureData.slide15.dashboard.mockItems[0]}</div>
@@ -1545,9 +1541,7 @@ const ApplicationBrochure = () => {
                                 </div>
                             </div>
 
-                            {/* RIGHT: Manager Action Center */}
                             <div className="relative">
-                                {/* Manager Approval Card */}
                                 <div className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-2xl relative z-10">
                                     <div className="flex items-center gap-3 mb-4 border-b border-white/5 pb-3">
                                         <div className="h-10 w-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">JD</div>
@@ -1576,7 +1570,6 @@ const ApplicationBrochure = () => {
                                     </div>
                                 </div>
 
-                                {/* Rejection Modal Overlay (Visual) */}
                                 <div className="absolute -bottom-10 -right-2 w-64 bg-slate-800 border-red-500/30 border p-4 rounded-xl shadow-2xl transform rotate-3 animate-in slide-in-from-bottom-4 duration-700 delay-300">
                                     <div className="text-xs font-bold text-red-400 mb-2 flex items-center gap-1">
                                         <XCircle className="h-3 w-3" /> {brochureData.slide15.overlays.rejection.title}
@@ -1587,7 +1580,6 @@ const ApplicationBrochure = () => {
                                     <Button size="sm" variant="ghost" className="w-full text-red-400 text-xs h-6 hover:bg-red-950">{brochureData.slide15.overlays.rejection.button}</Button>
                                 </div>
 
-                                {/* Success Toast (Visual) */}
                                 <div className="absolute -top-4 -right-4 bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg animate-bounce duration-[2000ms]">
                                     <CheckCircle2 className="h-3 w-3 inline mr-1" /> {brochureData.slide15.overlays.toast}
                                 </div>
@@ -1595,7 +1587,7 @@ const ApplicationBrochure = () => {
 
                         </div>
                     </div>
-                </ImageSlide>
+                </ImageSlide> */}
 
                 {/* ==================== SLIDE 16: PRODUCTIVITY & TOOLS (Refined) ==================== */}
                 <ImageSlide bg={brochureData.slide16.bgImage}>
