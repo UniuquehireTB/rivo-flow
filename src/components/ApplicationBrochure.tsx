@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -17,8 +17,65 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import brochureData from "./data/brochureData.json";
+import { toJpeg } from 'html-to-image';
+import PptxGenJS from 'pptxgenjs';
 
 const ApplicationBrochure = () => {
+
+    const slideRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+    const handleDownloadPPT = async () => {
+        const pptx = new PptxGenJS();
+
+        // Define and use A4 Landscape layout to match the aspect-[297/210] of the slides
+        // 297mm = ~11.69 inches, 210mm = ~8.27 inches
+        pptx.defineLayout({ name: 'A4_LANDSCAPE', width: 11.69, height: 8.27 });
+        pptx.layout = 'A4_LANDSCAPE';
+
+        const toastId = toast.loading('Generating PPT...');
+
+        try {
+            const slideKeys = Object.keys(brochureData);
+
+            for (const [index, key] of Object.keys(slideRefs.current).entries()) {
+                const node = slideRefs.current[key];
+                if (node) {
+                    try {
+                        toast.loading(`Generating Slide ${index + 1}/${Object.keys(slideRefs.current).length}...`, { id: toastId });
+
+                        // Small delay to allow UI to update
+                        await new Promise(resolve => setTimeout(resolve, 100));
+
+                        const dataUrl = await toJpeg(node, {
+                            quality: 0.8,
+                            cacheBust: true,
+                            skipAutoScale: true,
+                            pixelRatio: 1,
+                            filter: (node) => {
+                                return !node.classList?.contains('print:hidden');
+                            }
+                        });
+
+                        const slide = pptx.addSlide();
+                        // Use A4 dimensions
+                        slide.addImage({ data: dataUrl, x: 0, y: 0, w: 11.69, h: 8.27 });
+                    } catch (slideError) {
+                        console.error(`Failed to capture slide ${key}:`, slideError);
+                    }
+                }
+            }
+
+
+
+            toast.loading('Finalizing PPT file...', { id: toastId });
+            await pptx.writeFile({ fileName: 'ApplicationBrochure.pptx' });
+            toast.dismiss(toastId);
+            toast.success('PPT Downloaded Successfully!');
+        } catch (error) {
+            console.error('PPT Generation failed', error);
+            toast.error('Failed to generate PPT');
+        }
+    };
 
     const handlePrint = () => {
         window.print();
@@ -26,25 +83,24 @@ const ApplicationBrochure = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white print:p-0 print:bg-white font-sans selection:bg-blue-500 selection:text-white">
+        <div className="min-h-screen bg-black text-white print:p-0 print:bg-white font-sans selection:bg-blue-500 selection:text-white relative">
 
-            {/* Floating Action Button */}
-            {/* <div className="fixed top-6 right-6 z-50 print:hidden animate-in fade-in slide-in-from-top-4 duration-700">
+            {/* Floating Action Button for PPT */}
+            <div className="fixed top-6 right-6 z-50 print:hidden animate-in fade-in slide-in-from-top-4 duration-700 flex gap-4">
                 <Button
-                    onClick={handlePrint}
-                    className="gap-2 bg-white text-black hover:bg-zinc-200 shadow-2xl border-0 rounded-full px-6 py-6 h-auto text-lg font-bold tracking-wide transition-all hover:scale-105"
+                    onClick={handleDownloadPPT}
+                    className="gap-2 bg-blue-600 text-white hover:bg-blue-700 shadow-2xl border-0 rounded-full px-6 py-6 h-auto text-lg font-bold tracking-wide transition-all hover:scale-105"
                 >
                     <Download className="h-5 w-5" />
-                    Print / Save PDF
+                    Download PPT
                 </Button>
-            </div> */}
+            </div>
 
 
-
-            <div className="w-full mx-auto space-y-0 print:space-y-0 print:w-full">
+            <div className="w-full space-y-0 print:space-y-0 print:w-full">
 
                 {/* ==================== SLIDE 1: COVER (Brand) ==================== */}
-                <ImageSlide bg={brochureData.slide1.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide1'] = el; }} bg={brochureData.slide1.bgImage}>
                     <div className="h-full flex flex-col justify-center items-center text-center relative z-10 bg-black/60 backdrop-blur-sm">
                         {/*                         <div className="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center mb-8 shadow-2xl rotate-3 border border-white/10">
                             <Globe className="h-12 w-12 text-white" />
@@ -79,7 +135,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE: FEATURES OVERVIEW ==================== */}
-                <ImageSlide bg={brochureData.slideFeaturesOverview.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slideFeaturesOverview'] = el; }} bg={brochureData.slideFeaturesOverview.bgImage}>
                     <div className="h-full bg-slate-900/95 p-16 flex flex-col relative overflow-hidden">
                         {/* Background Effects */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] opacity-20" />
@@ -117,7 +173,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 16: ROLE ACCESS FLOW (Narrative) ==================== */}
-                <ImageSlide bg={brochureData.slideRoleAccess.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slideRoleAccess'] = el; }} bg={brochureData.slideRoleAccess.bgImage}>
                     <div className="h-full bg-slate-900/95 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Effects */}
@@ -169,7 +225,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 2: COMMAND CENTER ==================== */}
-                < ImageSlide bg={brochureData.slide2.bgImage} >
+                < ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide2'] = el; }} bg={brochureData.slide2.bgImage} >
                     <div className="h-full grid grid-cols-12 bg-gradient-to-r from-black via-slate-950/95 to-slate-900/50">
                         {/* Left Column: Features text */}
                         <div className="col-span-4 p-12 flex flex-col justify-center space-y-8 z-20">
@@ -302,7 +358,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide >
 
                 {/* ==================== SLIDE 3: SMART RECRUITMENT ==================== */}
-                < ImageSlide bg={brochureData.slide3.bgImage} >
+                < ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide3'] = el; }} bg={brochureData.slide3.bgImage} >
                     <div className="h-full bg-slate-900/95 p-16 flex items-center relative overflow-hidden">
 
                         {/* Distinct Background Gradient */}
@@ -397,7 +453,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide >
 
                 {/* ==================== SLIDE 4: AI RESUME PARSING ==================== */}
-                <ImageSlide bg={brochureData.slide4.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide4'] = el; }} bg={brochureData.slide4.bgImage}>
                     <div className="h-full bg-slate-950/85 p-12 flex items-center relative overflow-hidden">
                         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-600/20 blur-[120px] rounded-full pointer-events-none" />
 
@@ -464,7 +520,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 5: CANDIDATE MAPPING ==================== */}
-                < ImageSlide bg={brochureData.slide5.bgImage} >
+                < ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide5'] = el; }} bg={brochureData.slide5.bgImage} >
                     <div className="h-full bg-slate-900/90 p-0 flex relative overflow-hidden">
                         {/* Diagonal Split Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/95 to-blue-900/20" />
@@ -580,7 +636,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide >
 
                 {/* ==================== SLIDE 6: JOURNEY ==================== */}
-                < ImageSlide bg={brochureData.slide6.bgImage} >
+                < ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide6'] = el; }} bg={brochureData.slide6.bgImage} >
                     <div className="h-full w-full relative overflow-hidden">
                         {/* 1. Base Darkening Gradient (Left-Heavy to readable text) */}
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-slate-900/20" />
@@ -707,7 +763,7 @@ const ApplicationBrochure = () => {
 
                 {/* ==================== SLIDE 6: VERIFICATION & FRAUD ==================== */}
                 {/* ==================== SLIDE 7: VERIFICATION & SECURITY ==================== */}
-                <ImageSlide bg={brochureData.slide7.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide7'] = el; }} bg={brochureData.slide7.bgImage}>
                     <div className="h-full bg-slate-950/90 p-16 flex items-center relative overflow-hidden">
                         {/* Matrix Background */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
@@ -812,7 +868,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 8: JOB MANAGEMENT ==================== */}
-                <ImageSlide bg={brochureData.slide8.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide8'] = el; }} bg={brochureData.slide8.bgImage}>
                     <div className="h-full bg-slate-900/90 p-16 flex items-center relative overflow-hidden">
                         {/* Background Accents */}
                         <div className="absolute top-1/2 left-0 w-full h-[500px] bg-blue-600/5 -skew-y-12 pointer-events-none" />
@@ -906,7 +962,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 9: INTERVIEWS ==================== */}
-                <ImageSlide bg={brochureData.slide9.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide9'] = el; }} bg={brochureData.slide9.bgImage}>
                     <div className="h-full bg-indigo-950/85 backdrop-blur-sm p-16 flex flex-col relative overflow-hidden">
 
                         <SlideHeader icon={CalendarDays} title1={brochureData.slide9.header.title1} title2={brochureData.slide9.header.title2} />
@@ -992,7 +1048,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 10: CANDIDATE LIFECYCLE (ONBOARDING) ==================== */}
-                <ImageSlide bg={brochureData.slide10.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide10'] = el; }} bg={brochureData.slide10.bgImage}>
                     <div className="h-full bg-slate-950/90 p-16 relative overflow-hidden flex items-center">
                         {/* Background Grid */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
@@ -1082,7 +1138,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 11: TEAMS ==================== */}
-                <ImageSlide bg={brochureData.slide11.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide11'] = el; }} bg={brochureData.slide11.bgImage}>
                     <div className="h-full bg-blue-950/90 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Accent */}
@@ -1155,7 +1211,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 12: CLIENTS ==================== */}
-                <ImageSlide bg={brochureData.slide12.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide12'] = el; }} bg={brochureData.slide12.bgImage}>
                     <div className="h-full bg-slate-950/90 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Accent */}
@@ -1251,7 +1307,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 13: ADVERSE FLOWS (Handover & Closing) ==================== */}
-                <ImageSlide bg={brochureData.slide13.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide13'] = el; }} bg={brochureData.slide13.bgImage}>
                     <div className="h-full bg-slate-950/95 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Accent - Red/Warning */}
@@ -1372,7 +1428,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 14: ENTERPRISE ECOSYSTEM (Tech Features) ==================== */}
-                <ImageSlide bg={brochureData.slide14.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide14'] = el; }} bg={brochureData.slide14.bgImage}>
                     <div className="h-full bg-black/90 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Matrix/Grid Effect */}
@@ -1590,7 +1646,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide> */}
 
                 {/* ==================== SLIDE 16: PRODUCTIVITY & TOOLS (Refined) ==================== */}
-                <ImageSlide bg={brochureData.slide16.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide16'] = el; }} bg={brochureData.slide16.bgImage}>
                     <div className="h-full bg-slate-950/95 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Accents & Grid */}
@@ -1720,7 +1776,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 17: HIERARCHICAL REPORTS ==================== */}
-                <ImageSlide bg={brochureData.slide17.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide17'] = el; }} bg={brochureData.slide17.bgImage}>
                     <div className="h-full bg-slate-950/90 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Background Accents */}
@@ -1882,7 +1938,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 18: MASTER DATA (Refined) ==================== */}
-                <ImageSlide bg={brochureData.slide18.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide18'] = el; }} bg={brochureData.slide18.bgImage}>
                     <div className="h-full bg-slate-900/95 p-16 flex flex-col relative overflow-hidden">
 
                         {/* Matrix Background */}
@@ -2013,7 +2069,7 @@ const ApplicationBrochure = () => {
                 </ImageSlide>
 
                 {/* ==================== SLIDE 19: TECHNOLOGY STACK ==================== */}
-                <ImageSlide bg={brochureData.slide19.bgImage}>
+                <ImageSlide ref={(el: HTMLDivElement | null) => { slideRefs.current['slide19'] = el; }} bg={brochureData.slide19.bgImage}>
                     <div className="h-full bg-slate-900/90 p-16 flex flex-col justify-center relative overflow-hidden">
 
                         {/* Tech Background Elements */}
@@ -2086,8 +2142,9 @@ const ApplicationBrochure = () => {
 
 // --- Components ---
 
-const ImageSlide = ({ bg, children }: any) => (
+const ImageSlide = React.forwardRef(({ bg, children }: any, ref: any) => (
     <div
+        ref={ref}
         className="w-full aspect-[297/210] overflow-hidden relative shadow-2xl bg-cover bg-center print:break-after-page"
         style={{ backgroundImage: `url(${bg})` }}
     >
@@ -2113,7 +2170,7 @@ const ImageSlide = ({ bg, children }: any) => (
 
         {children}
     </div>
-);
+));
 
 const SlideHeader = ({ icon: Icon, title1, title2, color = "text-blue-500" }: any) => (
     <div className="flex items-center gap-4">

@@ -84,7 +84,8 @@
                 "bg": "bg-emerald-500",
                 "description": [
                     "Focus on talent engagement and delivery.",
-                    "Manage candidates, schedule interviews, capture feedback, and track individual performance.",
+                    "Manage candidates, schedule interviews, and capture feedback.",
+                    "Track individual performance.",
                     "Purpose-built workflows support productivity and consistency."
                 ]
             }
